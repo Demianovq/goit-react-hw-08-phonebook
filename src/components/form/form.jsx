@@ -1,7 +1,7 @@
 import { Formik, ErrorMessage } from 'formik';
 import { object, string } from 'yup';
-import { addContact } from 'redux/operations';
-import { getContacts } from 'redux/selectors';
+import { addContact } from 'redux/contacts/operations';
+import { getContacts } from 'redux/contacts/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   StyledForm,

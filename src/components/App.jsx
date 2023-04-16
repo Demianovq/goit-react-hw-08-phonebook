@@ -1,20 +1,19 @@
-import { ContactList } from './ContactsList/ContactsList';
-import { FormContacts } from './form/form';
-import { Filter } from './Filter/Filter';
-import { Container } from './Container/Container.styled';
-import { Section } from './Section/Section';
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from './Layout';
+import { Homepage } from '../pages/Homepage';
+import { Registerpage } from '../pages/Registerpage';
+import { Loginpage } from '../pages/Loginpage';
+import { Contactspage } from '../pages/Contactspage';
 
 export const App = () => {
   return (
-    <Container>
-      <Section title={'Phonebook'}>
-        <FormContacts />
-      </Section>
-
-      <Section title={'Contacts'}>
-        <Filter />
-        <ContactList />
-      </Section>
-    </Container>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Homepage />} />
+        <Route path="/register" element={<Registerpage />} />
+        <Route path="/login" element={<Loginpage />} />
+        <Route path="/contacts" element={<Contactspage />} />
+      </Route>
+    </Routes>
   );
 };
