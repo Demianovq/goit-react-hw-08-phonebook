@@ -5,4 +5,7 @@ export const NavBlock = styled.div`
   gap: 20px;
   align-items: center;
   margin-bottom: 10px;
+  background-color: black;
+  height: 50px;
+  color: white;
 `;
